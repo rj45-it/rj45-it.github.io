@@ -35,3 +35,9 @@ h1 {
   height: 100%;
   border: 0;
 }
+
+.buttons {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
