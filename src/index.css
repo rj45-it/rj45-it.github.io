@@ -1,33 +1,40 @@
+:root {
+  --primary-color: #4f2020;
+  --content-max-width: 800px;
+}
+
 body {
-  background-image: url("background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  color: #4f2020;
-  font-family: Webkit, sans-serif;
-  font-size: 16px;
   margin: 0;
   padding: 0;
 }
 
+body {
+  background: url("background.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  color: var(--primary-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
 h1 {
-  color: #4f2020;
+  color: var(--primary-color);
   font-size: 2.5em;
   margin: 0;
 }
 
-.video-container {
+.embedded-video {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.video-container iframe {
+.embedded-video iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -38,6 +45,6 @@ h1 {
 
 .buttons {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   margin-top: 20px;
 }
