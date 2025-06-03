@@ -1,1 +1,2 @@
-console.log("siema")
+console.log("weLCOME")
+alert("chyba tak")
