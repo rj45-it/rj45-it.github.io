@@ -1,0 +1,52 @@
+:root {
+  --primary-color: #ff0000;
+  --content-max-width: 800px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("https://lh5.googleusercontent.com/yF9mQBCW2qeX9QCgiRb9Ll2NC-U-YPehEox1UIsIork7YHXXDUyuopQbH2FXZPxJUEwVjnmX9lNHFSMtM0w7IEYYjUVe8aNYWCqDgLYp4MYURHtEbk_VEaxa1BvYbh7rYcVfCRlZ") center/cover no-repeat;
+  min-height: 100vh;
+  color: var(--primary-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.embedded-video {
+  position: relative;
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.embedded-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  border: #4f2020;
+  
+}
