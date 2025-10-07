@@ -3,157 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Kostki Rubika — wszystko o układance</title>
+  <title>Gorące Kostki Rubika w okolicy chcą się układać</title>
   <meta name="description" content="Historia, rodzaje i podstawowe techniki układania kostek Rubika. Strona edukacyjna po polsku.">
-  <style>
-    :root{--accent:#ff6f61;--bg:#0f1724;--card:#0b1220;--glass:rgba(255,255,255,0.04);--text:#e6eef8}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#071226 0%, #081826 100%); color:var(--text);line-height:1.5}
-    header{padding:28px 20px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#ffd166,#ff6f61);display:flex;align-items:center;justify-content:center;color:#081226;font-weight:700;font-size:20px}
-    nav a{color:var(--text);text-decoration:none;margin-left:18px;opacity:.85}
-    .container{max-width:1100px;margin:0 auto;padding:18px}
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:12px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
-    h1{margin:0 0 8px;font-size:30px}
-    p.lead{margin:0;color:#cfe7ff}
-    .stats{display:flex;gap:12px;margin-top:12px}
-    .stat{background:var(--glass);padding:10px;border-radius:10px;text-align:center;flex:1}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
-    .section{margin-top:26px}
-    .section h2{margin:0 0 10px}
-    ul{padding-left:20px}
-    .gallery{display:flex;gap:10px;flex-wrap:wrap}
-    .gallery img{width:calc(50% - 5px);border-radius:8px;display:block}
-    footer{margin-top:40px;padding:24px;text-align:center;color:#9fb3d6}
-    /* responsive */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .grid{grid-template-columns:repeat(2,1fr)}
-      .gallery img{width:100%}
-    }
-    @media (max-width:520px){
-      nav{display:none}
-      .grid{grid-template-columns:1fr}
-    }
-    /* small interactive button */
-    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
-    .muted{opacity:.8;font-size:14px}
-    code{background:#071425;padding:4px 6px;border-radius:6px;color:#a7e3ff}
+
   </style>
 </head>
-<body>
-  <header class="container">
-    <div class="brand">
-      <div class="logo">R³</div>
-      <div>
-        <div style="font-weight:700">Kostki Rubika</div>
-        <div class="muted">Historia, rodzaje i porady układania</div>
-      </div>
-    </div>
-    <nav>
-      <a href="#about">O kostce</a>
-      <a href="#types">Rodzaje</a>
-      <a href="#learn">Nauka</a>
-      <a href="#gallery">Galeria</a>
-    </nav>
-  </header>
+<body background="tlo.png">
+<h1 align="center" style="font-family: sans-serif; font-size: xxx-large; color: white;">Gorące Kostki Rubika w okolicy chcą się układać.</h1>
+<img src="gorkost1.png" alt=" gorąca kostka" width="200" height="300" align="right">
+<img src="gorkost2.png" alt=" gorąca kostka" width="200" height="300" align="right">
+<img src="gorkost3.png" alt=" gorąca kostka" width="200" height="300" align="right">
+<img src="gorkost4.png" alt=" gorąca kostka" width="200" height="300" align="right">
+<div>
+<p style="color: white; font-size: larger;">Kostka Rubika jest zwykle wykonana z tworzywa sztucznego ABS (akrylonitryl-butadien-styren).
+Punkt topnienia tego materiału to około 220 °C (428 °F).
 
-  <main class="container">
-    <section class="hero">
-      <div class="card">
-        <h1>Kostka Rubika — więcej niż zabawka</h1>
-        <p class="lead">Kostki Rubika uczą myślenia przestrzennego, algorytmicznego i cierpliwości. Ta strona to szybki przegląd historii, najbardziej popularnych wariantów oraz podstaw, jak zacząć układać.</p>
+Jednak zanim faktycznie się stopi, już przy ~100–120 °C plastik zaczyna się odkształcać i mięknąć, więc w praktyce kostka Rubika zaczyna się psuć znacznie wcześniej niż całkowicie stopi.</p>
+</div>
 
-        <div class="stats">
-          <div class="stat">
-            <div style="font-weight:700;font-size:18px">1974</div>
-            <div class="muted">rok wynalezienia</div>
-          </div>
-          <div class="stat">
-            <div style="font-weight:700;font-size:18px">3×3</div>
-            <div class="muted">najpopularniejszy wariant</div>
-          </div>
-          <div class="stat">
-            <div style="font-weight:700;font-size:18px">Speedcubing</div>
-            <div class="muted">sport i hobby</div>
-          </div>
-        </div>
+<div  style="color: rgb(0, 247, 255);" align="center">
+<p>🌡️ 0–40 °C</p>
+<p>Kostka zachowuje pełną funkcjonalność. 
+  W tym zakresie temperatur używasz jej normalnie. 
+  Smary silikonowe działają najlepiej w okolicach 20–30 °C.
 
-        <div class="section">
-          <h2 id="about">Krótka historia</h2>
-          <p>Kostkę wynalazł <strong>Ernő Rubik</strong> na początku lat 70. XX wieku w celu pokazania złożoności przestrzennej swoim studentom. Początkowo nazywana była "Magic Cube"; jej popularność eksplodowała na świecie w latach 80.</p>
-        </div>
-
-      </div>
-
-      <aside class="card">
-        <h3>Chcesz zacząć?</h3>
-        <p class="muted">Najpierw naucz się nazewnictwa ścian i prostych ruchów (np. <code>R</code>, <code>U'</code>, <code>F</code>). Potem poznaj kilka algorytmów.</p>
-        <button class="btn" onclick="scrollToLearning()">Przejdź do nauki</button>
-        <div style="margin-top:14px;font-size:13px" class="muted">Szybkie porady: nasmaruj mechanizm, ćwicz palming i poznaj notację.</div>
-      </aside>
-    </section>
-
-    <section class="card section" id="types">
-      <h2>Popularne rodzaje kostek</h2>
-      <div class="grid">
-        <div>
-          <h3>2×2 — Pocket cube</h3>
-          <p class="muted">Dobra na start, prostsza struktura. Uczy podstaw algorytmicznych.</p>
-        </div>
-        <div>
-          <h3>3×3 — Klasyczna</h3>
-          <p class="muted">Standardowa kostka, z którą wiąże się większość zawodów speedcubingowych.</p>
-        </div>
-        <div>
-          <h3>4×4 i większe</h3>
-          <p class="muted">Więcej warstw = więcej wyzwań; pojawiają się nowe problemy, jak parowanie i centra.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="card section" id="learn">
-      <h2>Nauka układania — krok po kroku</h2>
-      <ol>
-        <li><strong>Poznaj notację</strong> — R, L, U, D, F, B i ich modyfikacje (np. <code>R'</code>, <code>U2</code>).</li>
-        <li><strong>Ułóż biały krzyż</strong> — pierwsze proste cele dla początkujących.</li>
-        <li><strong>Ułóż warstwy</strong> — metoda warstwowa (Beginner's Method) jest najprostsza do nauki.</li>
-        <li><strong>Trenuj algorytmy</strong> — zapamiętaj kilka podstawowych sekwencji ruchów.</li>
-        <li><strong>Optymalizuj</strong> — skracaj ruchy, ucz się fingertricka i planowania kolejnych ruchów.</li>
-      </ol>
-      <p class="muted">Przykładowy algorytm (obrót narożnika): <code>R U R' U'</code>.</p>
-    </section>
-
-    <section class="card section" id="gallery">
-      <h2>Galeria</h2>
-      <div class="gallery">
-        <img alt="Kostka Rubika 3x3" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=60&auto=format&fit=crop">
-        <img alt="Speedcubing" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&q=60&auto=format&fit=crop">
-        <img alt="Kostki różne" src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&q=60&auto=format&fit=crop">
-        <img alt="Zawody speedcubing" src="https://images.unsplash.com/photo-1517638851339-4aa32003a9a6?w=800&q=60&auto=format&fit=crop">
-      </div>
-    </section>
-
-    <section class="card section">
-      <h2>Przydatne linki i zasoby</h2>
-      <ul>
-        <li>Oficjalne strony organizacji speedcubingowych (np. WCA)</li>
-        <li>Samouczki wideo (YouTube) — wyszukaj "how to solve 3x3" lub "Beginner's Method"</li>
-        <li>Symulatory online i timery</li>
-      </ul>
-    </section>
-
-    <footer>
-      <div class="muted">Strona demonstracyjna • Zbudowano jako prosty, responsywny szablon HTML</div>
-    </footer>
-  </main>
-
-  <script>
-    function scrollToLearning(){
-      document.getElementById('learn').scrollIntoView({behavior:'smooth'});
-    }
-  </script>
+<p>40–80 °C</p>
+<p>Plastik zaczyna się rozszerzać. Smar wewnątrz może się rozrzedzić lub wypłynąć. Kolory (naklejki lub nadruk) mogą blaknąć. Jeśli zostawisz kostkę np. w samochodzie na słońcu — może się zdeformować.</p>
+<p>🌡️ 80–120 °C</p>
+<p>Plastik ABS zaczyna mięknąć i tracić kształt. Kostka może się trwale wykrzywić lub rozlecieć przy próbie obrotu. Naklejki (jeśli są) mogą się odklejać lub zwęglać.</p>
+<p>🌡️ 120–200 °C</p>
+<p>Materiał staje się gumowaty i lepiący. Barwy czernieją, a powierzchnia matowieje. Tworzy się dym o zapachu spalonego plastiku (toksyczny – nie wdychać).</p>
+<p>🌡️ 220–240 °C (punkt topnienia ABS)</p>
+<p>Kostka zaczyna się roztapiać. Struktura molekularna plastiku ulega rozpadowi. Zaczyna się wydzielanie szkodliwych gazów (styren, akrylonitryl).</p>
+<p>🌡️ >300 °C</p>
+<p>Tworzywo ulega pirolizie – rozkłada się na czarne resztki i sadzę. Pozostaje czarny, zwęglony materiał przypominający smołę.</p>
+</div>
+<div align="center">
+<img src="info.png" alt="Diagram Topiącej się Kostki Rubika" width="600" height="800" align="center">
+</div>
 </body>
 </html>
