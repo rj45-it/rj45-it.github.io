@@ -1,0 +1,14 @@
+<html>
+    <head> 
+        <title>aaa</title>
+    <link rel="stylesheet" href="src/aaa.css">
+    </head>
+    <body>
+        <h1 align="center">suchar</h1>
+        <div align="center">suchar</div>
+        <div align="right"><button onclick="location.href='index.html'">LINUX</button></div>
+        <br><br><br>
+
+    </body>
+
+</html>
