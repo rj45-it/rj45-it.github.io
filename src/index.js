@@ -27,6 +27,7 @@ const pages = [
   '12f3a4b5-c6d7-48e9-8f1a-2b3c4d5e6f7a.html',
   '98a7b6c5-d4e3-21f0-9a8b-7c6d5e4f3a2b.html',
   '0f1e2d3c-4b5a-6978-9f0e-1d2c3b4a5f6e.html',
+  'a1b2c3d4-e5f6-47a8-9b0c-1d2e3f4a5b6c.html',
   'https://youtu.be/xvFZjo5PgG0?feature=shared',
   'https://www.youtube.com/watch?v=D_h2G6QMMjA',
   'https://gógl.pl',
