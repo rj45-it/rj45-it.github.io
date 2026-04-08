@@ -1,0 +1,89 @@
+.economy {
+  max-width: 860px;
+  margin: 46px auto;
+  padding: 36px 32px;
+  background: #101827;
+  color: white;
+  border-radius: 28px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  letter-spacing: 0.04em;
+}
+
+p {
+  max-width: 720px;
+  line-height: 1.75;
+  margin: 0 0 30px;
+  color: #c8d3e7;
+}
+
+.graph {
+  position: relative;
+  height: 280px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), transparent 70%);
+  border-radius: 22px;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.graph::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+  opacity: 0.24;
+}
+
+.line-poland,
+.line-romania {
+  position: absolute;
+  width: 260px;
+  height: 4px;
+  border-radius: 999px;
+}
+
+.line-poland { top: 140px; left: 40px; background: #4f9aeb; transform: rotate(-6deg); }
+.line-romania { top: 100px; left: 120px; background: #f59e0b; transform: rotate(-2deg); }
+
+.key {
+  margin-top: 20px;
+  color: #c8d3e7;
+}
+
+.dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+.dot.p { background: #4f9aeb; }
+.dot.r { background: #f59e0b; }
+
+.insight {
+  margin-top: 24px;
+  font-style: italic;
+  color: #a6b8db;
+}
+
+button {
+  margin-top: 32px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 999px;
+  background: #4f9aeb;
+  color: #0f172a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.92;
+}

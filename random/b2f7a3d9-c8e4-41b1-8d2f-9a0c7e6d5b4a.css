@@ -1,0 +1,139 @@
+:root {
+  --bg1: #07000a;
+  --bg2: #220029;
+  --text: #f0f0ff;
+  --red: #ff4f6d;
+  --blue: #40e0ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #2f002f, #07000a 45%);
+  color: var(--text);
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+.chaos {
+  position: relative;
+  z-index: 2;
+  width: min(94%, 860px);
+  margin: 0 auto;
+  padding: 36px 30px;
+  background: rgba(10, 0, 18, 0.92);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 90px rgba(64, 224, 255, 0.14);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  animation: wobbleTitle 1.6s infinite ease-in-out;
+}
+
+.barrel {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.barrel span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255,79,109,0.95), rgba(64,224,255,0.95));
+  color: #07000a;
+  font-size: 1.4rem;
+  font-weight: 700;
+  animation: jitter 0.2s infinite alternate;
+}
+
+.barrel span:nth-child(2) { animation-delay: 0.05s; }
+.barrel span:nth-child(3) { animation-delay: 0.1s; }
+.barrel span:nth-child(4) { animation-delay: 0.15s; }
+
+.text-block p {
+  margin: 0 0 28px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+button {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 14px 30px;
+  border-radius: 999px;
+  color: var(--text);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.grid,
+.wobble {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.grid {
+  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.2;
+  animation: gridShift 12s linear infinite;
+}
+
+.wobble {
+  background: radial-gradient(circle at top left, rgba(255,79,109,0.18), transparent 22%), radial-gradient(circle at bottom right, rgba(64,224,255,0.18), transparent 24%);
+  animation: wobbleBackground 6s ease-in-out infinite alternate;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02) 2px, transparent 2px, transparent 4px);
+  opacity: 0.15;
+}
+
+@keyframes wobbleTitle {
+  0%, 100% { transform: rotate(0deg) translateX(0); }
+  25% { transform: rotate(-1deg) translateX(-2px); }
+  50% { transform: rotate(1deg) translateX(2px); }
+  75% { transform: rotate(-0.5deg) translateX(1px); }
+}
+
+@keyframes jitter {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-4px, 4px); }
+}
+
+@keyframes gridShift {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 120px 120px, -120px -120px; }
+}
+
+@keyframes wobbleBackground {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.03); }
+}

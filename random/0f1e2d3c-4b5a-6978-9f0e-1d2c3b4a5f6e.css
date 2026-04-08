@@ -1,0 +1,61 @@
+.cheese-world {
+  max-width: 860px;
+  margin: 48px auto;
+  padding: 38px 32px;
+  background: linear-gradient(135deg, #1b0822, #2b0725);
+  border-radius: 30px;
+  color: #f8f0c2;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  letter-spacing: 0.1em;
+  color: #ffd54f;
+}
+
+p {
+  max-width: 780px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+  color: #f3ecbf;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.facts div {
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 213, 79, 0.18);
+}
+
+.facts h2 {
+  margin: 0 0 10px;
+  color: #ffd54f;
+}
+
+.facts p {
+  margin: 0;
+  color: #f8f0c2;
+}
+
+button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 999px;
+  background: #ffd54f;
+  color: #2b0725;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.92;
+}
