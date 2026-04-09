@@ -1,0 +1,194 @@
+.sun-chess {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(ellipse at center, #ffd700, #ff4500, #8b0000);
+  background-size: 300% 300%;
+  animation: explode 8s ease-in-out infinite;
+  overflow: hidden;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+  filter: blur(0.5px) brightness(1.3) contrast(2) drop-shadow(0 0 30px rgba(255,215,0,0.9)) grayscale(0) hue-rotate(45deg) invert(0) opacity(1) saturate(1.5) sepia(0.1);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  mask: radial-gradient(circle at 50% 50%, black 40%, transparent 70%);
+  backdrop-filter: brightness(1.5);
+  z-index: 11000;
+}
+
+@keyframes explode {
+  0% { background-position: 50% 50%; transform: scale(1); }
+  50% { background-position: 100% 100%; transform: scale(1.1); }
+  100% { background-position: 50% 50%; transform: scale(1); }
+}
+
+h1 {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%) rotateX(30deg) rotateY(60deg) scale(1.8);
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 40px #ffffff, 0 0 80px #ffffff;
+  animation: orbit 5s linear infinite, fade 3s ease-in-out infinite;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 8px;
+  text-decoration: overline underline;
+  text-transform: capitalize;
+  writing-mode: vertical-lr;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes orbit {
+  from { transform: translateX(-50%) rotateX(30deg) rotateY(60deg) scale(1.8) rotateZ(0deg); }
+  to { transform: translateX(-50%) rotateX(30deg) rotateY(60deg) scale(1.8) rotateZ(360deg); }
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+p {
+  position: absolute;
+  bottom: 30%;
+  left: 12%;
+  width: 76%;
+  font-size: 1.6rem;
+  color: #daa520;
+  background: linear-gradient(135deg, #8b4513, #daa520);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: melt 4s ease-in-out infinite alternate;
+  transform: skew(10deg, -5deg);
+  border: 4px solid #ff6347;
+  border-radius: 30px;
+  padding: 18px;
+  box-shadow: 0 0 60px rgba(255,99,71,0.7);
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+@keyframes melt {
+  from { transform: skew(10deg, -5deg) scale(1); }
+  to { transform: skew(10deg, -5deg) scale(1.05); }
+}
+
+.board {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.sun, .planet, .chocolate {
+  font-size: 9rem;
+  animation: chessMove 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
+  filter: hue-rotate(120deg) saturate(2.5) brightness(1.2);
+  transform-origin: center;
+  border: 6px solid #ffff00;
+  border-radius: 50%;
+  padding: 25px;
+  background: repeating-conic-gradient(from 0deg, #ff0000 0deg 30deg, #00ff00 30deg 60deg, #0000ff 60deg 90deg);
+}
+
+@keyframes chessMove {
+  0% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(50px) rotate(90deg); }
+  50% { transform: translateX(0) rotate(180deg); }
+  75% { transform: translateX(-50px) rotate(270deg); }
+  100% { transform: translateX(0) rotate(360deg); }
+}
+
+@keyframes glow {
+  from { filter: hue-rotate(120deg) saturate(2.5) brightness(1.2) drop-shadow(0 0 20px rgba(255,255,0,0.5)); }
+  to { filter: hue-rotate(120deg) saturate(2.5) brightness(1.2) drop-shadow(0 0 40px rgba(255,255,0,1)); }
+}
+
+.rules {
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  width: 40%;
+  background: linear-gradient(45deg, #800080, #ffc0cb, #00ced1);
+  padding: 20px;
+  border-radius: 60px;
+  transform: rotate(25deg);
+  animation: ruleShake 1.2s ease-in-out infinite;
+  color: #000000;
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 4px #ffffff;
+  border: 8px dashed #ff1493;
+}
+
+@keyframes ruleShake {
+  0%, 100% { transform: rotate(25deg) scale(1); }
+  50% { transform: rotate(25deg) scale(1.1); }
+}
+
+button {
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+  padding: 18px 36px;
+  background: conic-gradient(from 90deg, #ff69b4, #ffb6c1, #ffa07a);
+  border: none;
+  border-radius: 80px;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  animation: buttonPulse 1.5s ease-in-out infinite;
+  transform: skew(5deg);
+  box-shadow: 0 0 35px rgba(255,105,180,0.9);
+  transition: all 0.5s;
+}
+
+button:hover {
+  transform: skew(5deg) scale(1.4);
+  filter: brightness(2);
+}
+
+@keyframes buttonPulse {
+  0%, 100% { transform: skew(5deg) scale(1); }
+  50% { transform: skew(5deg) scale(1.1); }
+}
+
+/* Ekstremalne właściwości */
+* {
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform, opacity, filter, background, box-shadow;
+  isolation: isolate;
+  mix-blend-mode: difference;
+  scroll-behavior: smooth;
+  resize: vertical;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  text-rendering: geometricPrecision;
+  image-rendering: auto;
+  shape-outside: inset(10px 20px 30px 40px);
+  shape-margin: 15px;
+  column-count: 4;
+  column-gap: 25px;
+  orphans: 1;
+  widows: 1;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  content-visibility: auto;
+  contain: layout style;
+  touch-action: pinch-zoom;
+  overscroll-behavior: contain;
+  scroll-snap-type: both mandatory;
+  scroll-padding: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: #daa520 #8b4513;
+}</content>
+<parameter name="filePath">/workspaces/rj45-it.github.io/random/fedcba98-7654-3210-fedc-ba9876543210.css

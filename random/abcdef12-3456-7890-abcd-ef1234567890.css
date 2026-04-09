@@ -1,0 +1,198 @@
+.cloud-spaghetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, #87ceeb, #ffffff, #ffa500, #ff4500);
+  background-size: 200% 200%;
+  animation: wave 6s ease-in-out infinite;
+  overflow: hidden;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+  filter: blur(1px) brightness(1.2) contrast(1.5) drop-shadow(0 0 20px rgba(255,165,0,0.7)) grayscale(0.1) hue-rotate(90deg) invert(0) opacity(1) saturate(2) sepia(0.2);
+  clip-path: ellipse(50% 50% at 50% 50%);
+  mask: linear-gradient(45deg, transparent 30%, black 50%, transparent 70%);
+  backdrop-filter: contrast(2);
+  z-index: 10000;
+}
+
+@keyframes wave {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 100% 0%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+h1 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%) rotateX(60deg) rotateY(30deg) scale(1.5);
+  font-size: 4rem;
+  color: #ff6347;
+  text-shadow: 0 0 30px #ff6347, 0 0 60px #ff6347;
+  animation: flip 4s linear infinite, blink 1s ease-in-out infinite;
+  font-family: 'Impact', sans-serif;
+  letter-spacing: 5px;
+  text-decoration: line-through;
+  text-transform: lowercase;
+  writing-mode: sideways-lr;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes flip {
+  0% { transform: translateX(-50%) rotateX(60deg) rotateY(30deg) scale(1.5) rotateZ(0deg); }
+  50% { transform: translateX(-50%) rotateX(60deg) rotateY(30deg) scale(1.5) rotateZ(180deg); }
+  100% { transform: translateX(-50%) rotateX(60deg) rotateY(30deg) scale(1.5) rotateZ(360deg); }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+p {
+  position: absolute;
+  bottom: 25%;
+  left: 15%;
+  width: 70%;
+  font-size: 1.8rem;
+  color: #32cd32;
+  background: radial-gradient(circle, #ffff00, #adff2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: zigzag 3s ease-in-out infinite;
+  transform: skew(-15deg, 5deg);
+  border: 3px dashed #ff69b4;
+  border-radius: 25px;
+  padding: 15px;
+  box-shadow: 0 0 40px rgba(255,105,180,0.6);
+  text-align: justify;
+  font-weight: 900;
+  line-height: 2;
+}
+
+@keyframes zigzag {
+  0% { transform: skew(-15deg, 5deg) translateX(0); }
+  25% { transform: skew(-15deg, 5deg) translateX(20px); }
+  50% { transform: skew(-15deg, 5deg) translateX(-20px); }
+  75% { transform: skew(-15deg, 5deg) translateX(10px); }
+  100% { transform: skew(-15deg, 5deg) translateX(0); }
+}
+
+.ingredients {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.cloud, .spaghetti, .fork {
+  font-size: 8rem;
+  animation: jump 1.5s ease-in-out infinite alternate, twist 6s linear infinite;
+  filter: hue-rotate(270deg) saturate(3) brightness(0.8);
+  transform-origin: center;
+  border: 5px solid #00bfff;
+  border-radius: 50%;
+  padding: 20px;
+  background: conic-gradient(from 180deg, #ff0000, #00ff00, #0000ff);
+}
+
+@keyframes jump {
+  from { transform: translateY(0) scale(1); }
+  to { transform: translateY(-30px) scale(0.9); }
+}
+
+@keyframes twist {
+  from { transform: rotate(0deg) skew(0deg); }
+  to { transform: rotate(360deg) skew(45deg); }
+}
+
+.recipe {
+  position: absolute;
+  top: 75%;
+  left: 25%;
+  width: 50%;
+  background: repeating-linear-gradient(45deg, #ff1493, #ff1493 10px, #00ffff 10px, #00ffff 20px);
+  padding: 25px;
+  border-radius: 100px;
+  transform: rotate(-20deg);
+  animation: shake 0.5s ease-in-out infinite;
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px #000000;
+  border: 10px groove #ffff00;
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(-20deg) scale(1); }
+  25% { transform: rotate(-20deg) scale(1.05); }
+  50% { transform: rotate(-20deg) scale(0.95); }
+  75% { transform: rotate(-20deg) scale(1.02); }
+}
+
+button {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #dc143c, #ff8c00);
+  border: none;
+  border-radius: 50px;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  animation: rainbow 2s linear infinite;
+  transform: skew(15deg);
+  box-shadow: 0 0 25px rgba(220,20,60,0.8);
+  transition: all 0.4s;
+}
+
+button:hover {
+  transform: skew(15deg) scale(1.3);
+  filter: sepia(1);
+}
+
+@keyframes rainbow {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* Ekstremalne właściwości */
+* {
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity, filter, background;
+  isolation: auto;
+  mix-blend-mode: screen;
+  scroll-behavior: auto;
+  resize: horizontal;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+  hyphens: manual;
+  text-rendering: optimizeLegibility;
+  image-rendering: crisp-edges;
+  shape-outside: ellipse(50% 50%);
+  shape-margin: 20px;
+  column-count: 2;
+  column-gap: 30px;
+  orphans: 3;
+  widows: 3;
+  page-break-inside: auto;
+  break-inside: auto;
+  content-visibility: visible;
+  contain: none;
+  touch-action: auto;
+  overscroll-behavior: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding: 20px;
+  scrollbar-width: auto;
+  scrollbar-color: #00ff00 #ff0000;
+}</content>
+<parameter name="filePath">/workspaces/rj45-it.github.io/random/abcdef12-3456-7890-abcd-ef1234567890.css
