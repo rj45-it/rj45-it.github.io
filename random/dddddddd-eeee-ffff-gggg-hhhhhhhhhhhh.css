@@ -1,0 +1,189 @@
+.sun-pancakes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(225deg, #ffd700, #ffed4e, #fff8dc, #ffffe0);
+  background-size: 300% 300%;
+  animation: sunrise 8s ease-in-out infinite;
+  overflow: hidden;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+  filter: blur(0.1px) brightness(1.4) contrast(1.1) drop-shadow(0 0 30px rgba(255,215,0,0.9)) grayscale(0) hue-rotate(15deg) invert(0) opacity(1) saturate(1.7) sepia(0.3);
+  clip-path: ellipse(80% 70% at 50% 50%);
+  mask: conic-gradient(from 0deg, black 0deg 180deg, transparent 180deg 360deg);
+  backdrop-filter: brightness(1.3);
+  z-index: 15000;
+}
+
+@keyframes sunrise {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%) rotateX(40deg) rotateY(50deg) scale(2.3);
+  font-size: 4.5rem;
+  color: #ff4500;
+  text-shadow: 0 0 40px #ff4500, 0 0 80px #ff4500;
+  animation: sunRise 4.8s linear infinite, heatWave 2.4s ease-in-out infinite;
+  font-family: 'Georgia', serif;
+  letter-spacing: 15px;
+  text-decoration: underline wavy;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes sunRise {
+  from { transform: translateX(-50%) rotateX(40deg) rotateY(50deg) scale(2.3) rotateZ(0deg); }
+  to { transform: translateX(-50%) rotateX(40deg) rotateY(50deg) scale(2.3) rotateZ(360deg); }
+}
+
+@keyframes heatWave {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+p {
+  position: absolute;
+  bottom: 26%;
+  left: 14%;
+  width: 72%;
+  font-size: 1.6rem;
+  color: #8b4513;
+  background: radial-gradient(circle, #daa520, #f4a460);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pancakeFlip 5.2s ease-in-out infinite alternate;
+  transform: skew(-10deg, 8deg);
+  border: 5px solid #ff6347;
+  border-radius: 50px;
+  padding: 24px;
+  box-shadow: 0 0 60px rgba(255,99,71,0.8);
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+@keyframes pancakeFlip {
+  from { transform: skew(-10deg, 8deg) rotateY(0deg); }
+  to { transform: skew(-10deg, 8deg) rotateY(180deg); }
+}
+
+.feast {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 130px;
+}
+
+.sun, .pancake, .nutella {
+  font-size: 12rem;
+  animation: feastDance 3s ease-in-out infinite alternate, melt 4.5s linear infinite;
+  filter: hue-rotate(45deg) saturate(2.6) brightness(1.5);
+  transform-origin: center;
+  border: 10px solid #ffd700;
+  border-radius: 50%;
+  padding: 35px;
+  background: repeating-conic-gradient(from 45deg, #ffff00, #ffed4e, #fffacd);
+}
+
+@keyframes feastDance {
+  from { transform: translateY(0) scale(1); }
+  to { transform: translateY(-45px) scale(1.4); }
+}
+
+@keyframes melt {
+  from { filter: hue-rotate(45deg) saturate(2.6) brightness(1.5) blur(0px); }
+  to { filter: hue-rotate(45deg) saturate(2.6) brightness(1.5) blur(3px); }
+}
+
+.recipe {
+  position: absolute;
+  top: 74%;
+  left: 28%;
+  width: 44%;
+  background: linear-gradient(135deg, #ff69b4, #ffb6c1, #ffc0cb);
+  padding: 30px;
+  border-radius: 65px;
+  transform: rotate(28deg);
+  animation: recipeMix 2.5s ease-in-out infinite;
+  color: #000000;
+  font-size: 1.4rem;
+  text-shadow: 2px 2px 4px #ffffff;
+  border: 16px ridge #daa520;
+}
+
+@keyframes recipeMix {
+  0%, 100% { transform: rotate(28deg) scale(1); }
+  50% { transform: rotate(28deg) scale(1.09); }
+}
+
+button {
+  position: absolute;
+  bottom: 14%;
+  right: 14%;
+  padding: 26px 52px;
+  background: conic-gradient(from 90deg, #ff0000, #ff4500, #ff6347);
+  border: none;
+  border-radius: 85px;
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  animation: breakfastEnd 1.7s ease-in-out infinite alternate;
+  transform: skew(12deg);
+  box-shadow: 0 0 40px rgba(255,0,0,0.9);
+  transition: all 0.7s;
+}
+
+button:hover {
+  transform: skew(12deg) scale(1.5);
+  filter: invert(1) brightness(1.3);
+}
+
+@keyframes breakfastEnd {
+  from { box-shadow: 0 0 40px rgba(255,0,0,0.9); }
+  to { box-shadow: 0 0 65px rgba(255,0,0,1.2); }
+}
+
+/* Ekstremalne właściwości */
+* {
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: transform, opacity, filter, background, box-shadow;
+  isolation: isolate;
+  mix-blend-mode: color-dodge;
+  scroll-behavior: smooth;
+  resize: both;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto;
+  text-rendering: optimizeSpeed;
+  image-rendering: pixelated;
+  shape-outside: circle(70%);
+  shape-margin: 35px;
+  column-count: 6;
+  column-gap: 10px;
+  orphans: 5;
+  widows: 5;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  content-visibility: auto;
+  contain: layout style;
+  touch-action: manipulation;
+  overscroll-behavior: contain;
+  scroll-snap-type: y mandatory;
+  scroll-padding: 35px;
+  scrollbar-width: thin;
+  scrollbar-color: #ffd700 #fff8dc;
+}</content>
+<parameter name="filePath">/workspaces/rj45-it.github.io/random/dddddddd-eeee-ffff-gggg-hhhhhhhhhhhh.css

@@ -1,0 +1,115 @@
+.snake-game {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Donald_Tusk_KPRM_HQ.jpg/250px-Donald_Tusk_KPRM_HQ.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  filter: blur(0px) brightness(0.8) contrast(1.2) drop-shadow(0 0 10px rgba(0,0,0,0.5)) grayscale(0) hue-rotate(0deg) invert(0) opacity(1) saturate(1) sepia(0);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  mask: url(#mask);
+  backdrop-filter: blur(0px);
+  z-index: 16000;
+}
+
+h1 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) rotateX(0deg) rotateY(0deg) scale(1);
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px #000000;
+  animation: none;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: none;
+  writing-mode: horizontal-tb;
+  user-select: none;
+  pointer-events: none;
+}
+
+p {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: #ffffff;
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+button {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  padding: 10px 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 10px;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #cccccc;
+}
+
+/* Ekstremalne właściwości dla canvas */
+#snakeCanvas {
+  border: 5px solid #ffffff;
+  background: rgba(255,255,255,0.1);
+  filter: blur(0px) brightness(1) contrast(1) drop-shadow(0 0 5px rgba(255,255,255,0.5)) grayscale(0) hue-rotate(0deg) invert(0) opacity(1) saturate(1) sepia(0);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  mask: none;
+  backdrop-filter: none;
+  z-index: 17000;
+}
+
+/* Dodatkowe ekstremalne właściwości */
+* {
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+  isolation: isolate;
+  mix-blend-mode: normal;
+  scroll-behavior: smooth;
+  resize: none;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  text-rendering: auto;
+  image-rendering: auto;
+  shape-outside: none;
+  shape-margin: 0px;
+  column-count: 1;
+  column-gap: 0px;
+  orphans: 0;
+  widows: 0;
+  page-break-inside: auto;
+  break-inside: auto;
+  content-visibility: visible;
+  contain: none;
+  touch-action: auto;
+  overscroll-behavior: auto;
+  scroll-snap-type: none;
+  scroll-padding: 0px;
+  scrollbar-width: auto;
+  scrollbar-color: auto auto;
+}</content>
+<parameter name="filePath">/workspaces/rj45-it.github.io/random/eeeeeeee-ffff-gggg-hhhh-iiiiiiiiiiii.css

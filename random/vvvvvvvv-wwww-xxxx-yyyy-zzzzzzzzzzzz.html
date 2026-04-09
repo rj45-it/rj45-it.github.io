@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Pułapka w absurdalnym wszechświecie</title>
+        <link rel="stylesheet" href="vvvvvvvv-wwww-xxxx-yyyy-zzzzzzzzzzzz.css">
+    </head>
+    <body>
+        <div class="trap-universe">
+            <h1>Witaj w pułapce!</h1>
+            <p>Jesteś uwięziony w absurdalnym wszechświecie. Przycisk wyjścia ucieka przed Tobą. Spróbuj go złapać!</p>
+            <div class="elements">
+                <div class="alien">👽</div>
+                <div class="blackhole">🕳️</div>
+                <div class="rocket">🚀</div>
+            </div>
+            <div class="joke">
+                <h2>Żart dnia</h2>
+                <p>Dlaczego przycisk ucieka? Bo nie chce być kliknięty w absurdzie!</p>
+            </div>
+            <button id="escapeButton" onclick="location.href='../index.html'">Uciekaj!</button>
+        </div>
+        <script>
+            const button = document.getElementById('escapeButton');
+            document.addEventListener('mousemove', (e) => {
+                const rect = button.getBoundingClientRect();
+                const buttonCenterX = rect.left + rect.width / 2;
+                const buttonCenterY = rect.top + rect.height / 2;
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+                const distance = Math.sqrt((mouseX - buttonCenterX) ** 2 + (mouseY - buttonCenterY) ** 2);
+                if (distance < 100) {
+                    const angle = Math.atan2(mouseY - buttonCenterY, mouseX - buttonCenterX);
+                    const newX = buttonCenterX + Math.cos(angle) * 50;
+                    const newY = buttonCenterY + Math.sin(angle) * 50;
+                    button.style.left = Math.max(0, Math.min(window.innerWidth - rect.width, newX - rect.width / 2)) + 'px';
+                    button.style.top = Math.max(0, Math.min(window.innerHeight - rect.height, newY - rect.height / 2)) + 'px';
+                }
+            });
+        </script>
+    </body>
+</html></content>
+<parameter name="filePath">/workspaces/rj45-it.github.io/random/vvvvvvvv-wwww-xxxx-yyyy-zzzzzzzzzzzz.html

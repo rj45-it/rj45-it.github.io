@@ -1,0 +1,191 @@
+.dancing-trees {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #228b22, #32cd32, #006400);
+  background-size: 400% 400%;
+  animation: forestDance 6s ease-in-out infinite;
+  overflow: hidden;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  filter: blur(0px) brightness(1) contrast(1) drop-shadow(0 0 20px rgba(34,139,34,0.5)) grayscale(0) hue-rotate(120deg) invert(0) opacity(1) saturate(1.5) sepia(0);
+  clip-path: ellipse(60% 70% at 50% 50%);
+  mask: linear-gradient(45deg, transparent 30%, black 50%, transparent 70%);
+  backdrop-filter: brightness(1.1);
+  z-index: 17000;
+}
+
+@keyframes forestDance {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 100% 0%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+h1 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) rotateX(30deg) rotateY(45deg) scale(1.5);
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 0 0 20px #ffffff;
+  animation: treeSway 3s linear infinite, leafFall 2s ease-in-out infinite;
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 5px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  writing-mode: horizontal-tb;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes treeSway {
+  from { transform: translateX(-50%) rotateX(30deg) rotateY(45deg) scale(1.5) rotateZ(0deg); }
+  to { transform: translateX(-50%) rotateX(30deg) rotateY(45deg) scale(1.5) rotateZ(10deg); }
+}
+
+@keyframes leafFall {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+p {
+  position: absolute;
+  bottom: 25%;
+  left: 20%;
+  width: 60%;
+  font-size: 1.5rem;
+  color: #f0e68c;
+  background: radial-gradient(circle, #daa520, #f4a460);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: windBlow 4s ease-in-out infinite alternate;
+  transform: skew(5deg, -3deg);
+  border: 3px solid #8b4513;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 0 30px rgba(139,69,19,0.6);
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+@keyframes windBlow {
+  from { transform: skew(5deg, -3deg) translateX(0); }
+  to { transform: skew(5deg, -3deg) translateX(20px); }
+}
+
+.trees {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 100px;
+}
+
+.tree {
+  font-size: 8rem;
+  animation: dance 2s ease-in-out infinite alternate, spin 4s linear infinite;
+  filter: hue-rotate(90deg) saturate(2) brightness(1.2);
+  transform-origin: center;
+  border: 5px solid #228b22;
+  border-radius: 50%;
+  padding: 20px;
+  background: conic-gradient(from 0deg, #32cd32, #228b22, #006400);
+}
+
+@keyframes dance {
+  from { transform: translateY(0) scale(1); }
+  to { transform: translateY(-20px) scale(1.1); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.story {
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  width: 50%;
+  background: repeating-linear-gradient(45deg, #f0e68c, #f0e68c 10px, #daa520 10px, #daa520 20px);
+  padding: 20px;
+  border-radius: 40px;
+  transform: rotate(-15deg);
+  animation: storyTwist 1.5s ease-in-out infinite;
+  color: #000000;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px #ffffff;
+  border: 8px groove #8b4513;
+}
+
+@keyframes storyTwist {
+  0%, 100% { transform: rotate(-15deg) scale(1); }
+  50% { transform: rotate(-15deg) scale(1.05); }
+}
+
+button {
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #228b22, #32cd32);
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  animation: buttonGrow 1.2s ease-in-out infinite alternate;
+  transform: skew(-5deg);
+  box-shadow: 0 0 20px rgba(34,139,34,0.7);
+  transition: all 0.4s;
+}
+
+button:hover {
+  transform: skew(-5deg) scale(1.2);
+  filter: brightness(1.3);
+}
+
+@keyframes buttonGrow {
+  from { box-shadow: 0 0 20px rgba(34,139,34,0.7); }
+  to { box-shadow: 0 0 30px rgba(34,139,34,0.9); }
+}
+
+/* Ekstremalne właściwości */
+* {
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: transform, opacity, filter;
+  isolation: auto;
+  mix-blend-mode: multiply;
+  scroll-behavior: auto;
+  resize: horizontal;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+  hyphens: manual;
+  text-rendering: optimizeSpeed;
+  image-rendering: pixelated;
+  shape-outside: circle(50%);
+  shape-margin: 20px;
+  column-count: 2;
+  column-gap: 15px;
+  orphans: 2;
+  widows: 2;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  content-visibility: auto;
+  contain: layout style paint;
+  touch-action: pinch-zoom;
+  overscroll-behavior: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: #228b22 #ffffff;
+}</content>
+<parameter name="filePath">/workspaces/rj45-it.github.io/random/jjjjjjjj-kkkk-llll-mmmm-nnnnnnnnnnnn.css
