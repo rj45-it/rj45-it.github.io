@@ -44,6 +44,8 @@ const pages = [
   'https://youtu.be/xvFZjo5PgG0?feature=shared',
   'https://www.youtube.com/watch?v=D_h2G6QMMjA',
   'https://gógl.pl',
+  '87654321-abcd-ef12-3456-789012345678.html',
+  '12345678-9abc-def0-1234-567890abcdef.html',
 ];
 
 function goToRandomPage() {

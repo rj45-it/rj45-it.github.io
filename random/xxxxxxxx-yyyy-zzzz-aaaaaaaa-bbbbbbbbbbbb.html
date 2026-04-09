@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Generator Absurdalnych Zdań</title>
+        <link rel="stylesheet" href="xxxxxxxx-yyyy-zzzz-aaaaaaaa-bbbbbbbbbbbb.css">
+    </head>
+    <body>
+        <div class="generator">
+            <h1>Generator Zdań Absurdu!</h1>
+            <p>Kliknij, aby wygenerować losowe absurdalne zdanie.</p>
+            <div id="sentence">Kliknij przycisk, aby zacząć!</div>
+            <button onclick="generateSentence()">Generuj Zdanie</button>
+            <button onclick="location.href='../index.html'">Powrót</button>
+        </div>
+        <script>
+            const subjects = ["Bigos", "Pralce", "Lodówki", "Zbigniew Paleta", "Marchewka", "Słońce"];
+            const verbs = ["tańczy", "walczy", "je", "programuje", "lata", "śpiewa"];
+            const objects = ["z kosmitami", "w kosmosie", "naleśniki", "na Księżycu", "z nutellą", "na sedesie"];
+            function generateSentence() {
+                const sub = subjects[Math.floor(Math.random() * subjects.length)];
+                const verb = verbs[Math.floor(Math.random() * verbs.length)];
+                const obj = objects[Math.floor(Math.random() * objects.length)];
+                document.getElementById('sentence').textContent = sub + " " + verb + " " + obj + ".";
+            }
+        </script>
+    </body>
+</html></content>
+<parameter name="filePath">/workspaces/rj45-it.github.io/random/xxxxxxxx-yyyy-zzzz-aaaaaaaa-bbbbbbbbbbbb.html

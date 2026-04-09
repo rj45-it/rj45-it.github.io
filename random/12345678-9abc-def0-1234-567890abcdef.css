@@ -1,0 +1,117 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #000000, #ff0000, #ffff00, #0000ff);
+  background-size: 200% 200%;
+  animation: andanExplode 5s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+  filter: blur(0px) brightness(1.5) contrast(2) drop-shadow(0 0 100px rgba(255,0,0,1)) hue-rotate(180deg) invert(0) opacity(1) saturate(2) sepia(0.5);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
+  mask: conic-gradient(from 90deg, transparent 0deg 180deg, black 180deg 360deg);
+  backdrop-filter: invert(1) brightness(0.5);
+  z-index: 20000;
+}
+
+@keyframes andanExplode {
+  0% { background-position: 0% 0%; transform: scale(1); }
+  25% { background-position: 100% 0%; transform: scale(1.2); }
+  50% { background-position: 100% 100%; transform: scale(1.5); }
+  75% { background-position: 0% 100%; transform: scale(1.2); }
+  100% { background-position: 0% 0%; transform: scale(1); }
+}
+
+h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  text-shadow: 0 0 50px #ffffff, 0 0 100px #ffffff, 0 0 150px #ffffff;
+  animation: andanFlash 1s ease-in-out infinite alternate;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  transform: rotateX(45deg) rotateY(45deg);
+}
+
+@keyframes andanFlash {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+p {
+  font-size: 2rem;
+  color: #ffff00;
+  background: linear-gradient(90deg, #ff1493, #00bfff, #ff4500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: andanShake 2s ease-in-out infinite;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+@keyframes andanShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+button {
+  padding: 20px 40px;
+  background: linear-gradient(45deg, #ff0000, #ff4500, #ffff00);
+  border: none;
+  border-radius: 50px;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  animation: andanGlow 1.5s ease-in-out infinite alternate;
+  box-shadow: 0 0 50px rgba(255,0,0,0.8);
+  transition: all 0.4s;
+}
+
+button:hover {
+  transform: scale(1.3);
+  filter: hue-rotate(90deg);
+}
+
+@keyframes andanGlow {
+  from { box-shadow: 0 0 50px rgba(255,0,0,0.8); }
+  to { box-shadow: 0 0 70px rgba(255,0,0,1); }
+}
+
+/* Ekstremalne właściwości */
+* {
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity, filter, background, box-shadow;
+  isolation: isolate;
+  mix-blend-mode: multiply;
+  scroll-behavior: auto;
+  resize: vertical;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+  hyphens: none;
+  text-rendering: geometricPrecision;
+  image-rendering: auto;
+  shape-outside: ellipse(50% 50%);
+  shape-margin: 40px;
+  column-count: 5;
+  column-gap: 30px;
+  orphans: 4;
+  widows: 4;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  content-visibility: hidden;
+  contain: size layout style paint;
+  touch-action: pinch-zoom;
+  overscroll-behavior: none;
+  scroll-snap-type: x proximity;
+  scroll-padding: 20px;
+  scrollbar-width: none;
+  scrollbar-color: #000000 #ffffff;
+}

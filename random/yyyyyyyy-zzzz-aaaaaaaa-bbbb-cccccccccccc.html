@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Klikaj i Eksploduj</title>
+        <link rel="stylesheet" href="yyyyyyyy-zzzz-aaaaaaaa-bbbb-cccccccccccc.css">
+    </head>
+    <body>
+        <div class="click-game">
+            <h1>Klikaj na Absurdalne Elementy!</h1>
+            <p>Kliknij na elementy, aby je eksplodować. Ile uda Ci się zniszczyć?</p>
+            <div class="elements">
+                <div class="element" onclick="explode(this)">🍲</div>
+                <div class="element" onclick="explode(this)">🧊</div>
+                <div class="element" onclick="explode(this)">☀️</div>
+                <div class="element" onclick="explode(this)">🥕</div>
+                <div class="element" onclick="explode(this)">👟</div>
+            </div>
+            <div id="score">Punkty: 0</div>
+            <button onclick="resetGame()">Reset</button>
+            <button onclick="location.href='../index.html'">Powrót</button>
+        </div>
+        <script>
+            let score = 0;
+            function explode(el) {
+                el.style.display = 'none';
+                score++;
+                document.getElementById('score').textContent = 'Punkty: ' + score;
+            }
+            function resetGame() {
+                document.querySelectorAll('.element').forEach(el => el.style.display = 'block');
+                score = 0;
+                document.getElementById('score').textContent = 'Punkty: 0';
+            }
+        </script>
+    </body>
+</html></content>
+<parameter name="filePath">/workspaces/rj45-it.github.io/random/yyyyyyyy-zzzz-aaaaaaaa-bbbb-cccccccccccc.html

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankieta o PKB</title>
+    <link rel="stylesheet" href="87654321-abcd-ef12-3456-789012345678.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ankieta o PKB</h1>
+        <p>Który kraj ma najwyższe PKB?</p>
+        <div class="options">
+            <button onclick="selectCountry('Polska')">Polska</button>
+            <button onclick="selectCountry('Rumunia')">Rumunia</button>
+            <button onclick="selectCountry('Niemcy')">Niemcy</button>
+        </div>
+        <button onclick="location.href='../index.html'">Powrót</button>
+    </div>
+    <script>
+        function selectCountry(country) {
+            if (country === 'Niemcy') {
+                window.location.href = '12345678-9abc-def0-1234-567890abcdef.html';
+            } else {
+                alert('Dobra odpowiedź! Ale tylko Niemcy prowadzą do tajemnicy.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Absurdalny Quiz</title>
+        <link rel="stylesheet" href="wwwwwwww-xxxx-yyyy-zzzz-aaaaaaaaaaaa.css">
+    </head>
+    <body>
+        <div class="quiz">
+            <h1>Quiz Absurdu!</h1>
+            <p>Odpowiedz na pytania i sprawdź swoją wiedzę o nonsensie.</p>
+            <div id="question">Pytanie: Ile bigosów mieści się w pralce?</div>
+            <div class="options">
+                <button onclick="answer(1)">1</button>
+                <button onclick="answer(2)">42</button>
+                <button onclick="answer(3)">Nieskończoność</button>
+                <button onclick="answer(4)">Żaden</button>
+            </div>
+            <div id="result"></div>
+            <button onclick="nextQuestion()">Następne pytanie</button>
+            <button onclick="location.href='../index.html'">Powrót</button>
+        </div>
+        <script>
+            let questions = [
+                { q: "Ile bigosów mieści się w pralce?", a: 3, o: ["1", "42", "Nieskończoność", "Żaden"] },
+                { q: "Co robi słońce po zachodzie?", a: 2, o: ["Śpi", "Je naleśniki", "Tańczy", "Programuje"] },
+                { q: "Dlaczego marchewka lata?", a: 1, o: ["Bo jest astronautką", "Bo jest ptakiem", "Bo jest samochodem", "Bo jest rybą"] }
+            ];
+            let current = 0;
+            let score = 0;
+            function loadQuestion() {
+                document.getElementById('question').textContent = questions[current].q;
+                let buttons = document.querySelectorAll('.options button');
+                buttons.forEach((btn, i) => btn.textContent = questions[current].o[i]);
+                document.getElementById('result').textContent = '';
+            }
+            function answer(choice) {
+                if (choice === questions[current].a) {
+                    score++;
+                    document.getElementById('result').textContent = 'Dobrze! Punkty: ' + score;
+                } else {
+                    document.getElementById('result').textContent = 'Źle! Punkty: ' + score;
+                }
+            }
+            function nextQuestion() {
+                current = (current + 1) % questions.length;
+                loadQuestion();
+            }
+            loadQuestion();
+        </script>
+    </body>
+</html></content>
+<parameter name="filePath">/workspaces/rj45-it.github.io/random/wwwwwwww-xxxx-yyyy-zzzz-aaaaaaaaaaaa.html
