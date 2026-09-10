@@ -2,7 +2,7 @@
   <head>
     <link rel="stylesheet" href="src/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-    <style>
+      <style>
     table {
       border-collapse: collapse;
       margin: 20px auto;
@@ -14,10 +14,37 @@
       text-align: center;
       vertical-align: middle;
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
     }
+
     img {
       width: 100px;
       height: 100px;
+      opacity: 0;
+      animation: appear 0.8s forwards;
+      filter: drop-shadow(0 0 10px #00f);
+    }
+
+    @keyframes appear {
+      0% {
+        opacity: 0;
+        transform: scale(0.2) rotate(0deg);
+        filter: drop-shadow(0 0 2px #fff);
+      }
+      30% {
+        opacity: 1;
+        transform: scale(1.3) rotate(180deg);
+        filter: drop-shadow(0 0 20px #0ff);
+      }
+      60% {
+        transform: scale(0.9) rotate(360deg);
+        filter: drop-shadow(0 0 30px #f0f);
+      }
+      100% {
+        transform: scale(1) rotate(720deg);
+        filter: drop-shadow(0 0 10px #0f0);
+      }
     }
 
     .btns {
@@ -25,6 +52,7 @@
       margin-top: 20px;
     }
   </style>
+
     <title>Witajcie na stronie o rj45</title>
   </head>
   <body>
@@ -93,7 +121,6 @@ wyrobu betonu.</div>
   </table>
 
   <div class="btns">
-    <button onclick="computerMove()">Komputer</button>
     <button onclick="resetBoard()">Reset</button>
   </div>
 
@@ -103,15 +130,51 @@ wyrobu betonu.</div>
       cells[i] = document.getElementById('c' + i);
     }
 
+    const wins = [
+      [0,1,2],
+      [3,4,5],
+      [6,7,8],
+      [0,3,6],
+      [1,4,7],
+      [2,5,8],
+      [0,4,8],
+      [2,4,6]
+    ];
+
+    function checkWinner() {
+      for (let w of wins) {
+        const [a,b,c] = w;
+        const va = cells[a].innerHTML;
+        const vb = cells[b].innerHTML;
+        const vc = cells[c].innerHTML;
+
+        if (va && vb && vc) {
+          if (va.includes("krzyzyk") && vb.includes("krzyzyk") && vc.includes("krzyzyk")) {
+            window.location = "dupa.html";
+          }
+          if (va.includes("kolo") && vb.includes("kolo") && vc.includes("kolo")) {
+            alert("pierogi ruskie");
+            location.reload();
+          }
+        }
+      }
+    }
+
     function playerMove(index) {
       if (cells[index].innerHTML === '') {
         cells[index].innerHTML = '<img src="krzyzyk.jpg">';
+        checkWinner();
+
+        setTimeout(() => {
+          computerMove();
+        }, 300);
       }
     }
 
     function computerMove() {
       const randomIndex = Math.floor(Math.random() * 9);
       cells[randomIndex].innerHTML = '<img src="kolo.jpg">';
+      checkWinner();
     }
 
     function resetBoard() {
