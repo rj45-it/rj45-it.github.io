@@ -2,6 +2,29 @@
   <head>
     <link rel="stylesheet" href="src/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    td {
+      width: 120px;
+      height: 120px;
+      border: 2px solid #000;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .btns {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
     <title>Witajcie na stronie o rj45</title>
   </head>
   <body>
@@ -51,5 +74,51 @@ wyrobu betonu.</div>
         </div>
       </div>
     </div>
+  <table>
+    <tr>
+      <td onclick="playerMove(0)" id="c0"></td>
+      <td onclick="playerMove(1)" id="c1"></td>
+      <td onclick="playerMove(2)" id="c2"></td>
+    </tr>
+    <tr>
+      <td onclick="playerMove(3)" id="c3"></td>
+      <td onclick="playerMove(4)" id="c4"></td>
+      <td onclick="playerMove(5)" id="c5"></td>
+    </tr>
+    <tr>
+      <td onclick="playerMove(6)" id="c6"></td>
+      <td onclick="playerMove(7)" id="c7"></td>
+      <td onclick="playerMove(8)" id="c8"></td>
+    </tr>
+  </table>
+
+  <div class="btns">
+    <button onclick="computerMove()">Komputer</button>
+    <button onclick="resetBoard()">Reset</button>
+  </div>
+
+  <script>
+    const cells = [];
+    for (let i = 0; i < 9; i++) {
+      cells[i] = document.getElementById('c' + i);
+    }
+
+    function playerMove(index) {
+      if (cells[index].innerHTML === '') {
+        cells[index].innerHTML = '<img src="krzyzyk.jpg">';
+      }
+    }
+
+    function computerMove() {
+      const randomIndex = Math.floor(Math.random() * 9);
+      cells[randomIndex].innerHTML = '<img src="kolo.jpg">';
+    }
+
+    function resetBoard() {
+      for (let i = 0; i < 9; i++) {
+        cells[i].innerHTML = '';
+      }
+    }
+  </script>
   </body>
 </html>
