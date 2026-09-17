@@ -150,20 +150,25 @@ wyrobu betonu.</div>
 
         if (va && vb && vc) {
           if (va.includes("krzyzyk") && vb.includes("krzyzyk") && vc.includes("krzyzyk")) {
-            window.location = "strona_0.html";
+            window.location.href = "gra/strona_0.html";
+            return true;
           }
           if (va.includes("kolo") && vb.includes("kolo") && vc.includes("kolo")) {
             alert("pierogi ruskie");
             location.reload();
+            return true;
           }
         }
       }
+      return false;
     }
 
     function playerMove(index) {
       if (cells[index].innerHTML === '') {
         cells[index].innerHTML = '<img src="krzyzyk.jpg">';
-        checkWinner();
+        if (checkWinner()) {
+          return;
+        }
 
         setTimeout(() => {
           computerMove();
@@ -172,7 +177,15 @@ wyrobu betonu.</div>
     }
 
     function computerMove() {
-      const randomIndex = Math.floor(Math.random() * 9);
+      if (checkWinner()) {
+        return;
+      }
+
+      let randomIndex;
+      do {
+        randomIndex = Math.floor(Math.random() * 9);
+      } while (cells[randomIndex].innerHTML !== '');
+
       cells[randomIndex].innerHTML = '<img src="kolo.jpg">';
       checkWinner();
     }
