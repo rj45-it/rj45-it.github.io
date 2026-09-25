@@ -1,0 +1,112 @@
+:root {
+  --powiedz-ink: #281b15;
+  --powiedz-paper: #fff8e8;
+  --powiedz-accent: #e85d04;
+  --powiedz-accent-dark: #a63d00;
+}
+
+.powiedz-box,
+.answer-page {
+  box-sizing: border-box;
+  max-width: 720px;
+  margin: 32px auto;
+  padding: 28px;
+  color: var(--powiedz-ink);
+  background: var(--powiedz-paper);
+  border: 3px solid var(--powiedz-ink);
+  box-shadow: 8px 8px 0 var(--powiedz-accent);
+}
+
+.powiedz-box {
+  text-align: center;
+}
+
+.powiedz-label {
+  margin: 0 0 8px;
+  color: var(--powiedz-accent-dark);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.powiedz-box h2,
+.answer-page h1 {
+  margin: 0 0 20px;
+  font-family: Georgia, serif;
+}
+
+.powiedz-search {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.powiedz-search input {
+  min-width: 0;
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid var(--powiedz-ink);
+  color: var(--powiedz-ink);
+  background: #fff;
+  font: inherit;
+}
+
+.powiedz-search button {
+  padding: 12px 20px;
+  border: 2px solid var(--powiedz-ink);
+  color: #fff;
+  background: var(--powiedz-accent-dark);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.powiedz-search button:hover,
+.powiedz-search button:focus-visible {
+  background: var(--powiedz-ink);
+}
+
+.powiedz-status {
+  min-height: 1.4em;
+  margin: 12px 0 0;
+  color: var(--powiedz-accent-dark);
+}
+
+.answer-page {
+  margin-top: 12vh;
+}
+
+.answer-card {
+  margin-top: 28px;
+  padding: 22px;
+  border-left: 6px solid var(--powiedz-accent);
+  background: #fff;
+}
+
+.answer-card h2 {
+  margin-top: 0;
+  font-family: Georgia, serif;
+}
+
+.answer-card p {
+  line-height: 1.6;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 24px;
+  color: var(--powiedz-accent-dark);
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .powiedz-box,
+  .answer-page {
+    margin: 20px 14px;
+    padding: 22px 18px;
+  }
+
+  .powiedz-search {
+    flex-direction: column;
+  }
+}

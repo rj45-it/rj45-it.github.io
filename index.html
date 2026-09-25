@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="src/powiedz.css">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
       <style>
     table {
@@ -62,6 +63,18 @@ otrzymanego betonu zależy od jakości wymienionych składników .
 Dlatego cement , kruszywo i woda<br> powinny być zbadane przez 
 kompetentnych fachowców i ocenione pod względem ich przydatności do 
 wyrobu betonu.</div>
+    <section class="powiedz-box" aria-labelledby="powiedz-title">
+      <p class="powiedz-label">POWIEDZ</p>
+      <h2 id="powiedz-title">Masz pytanie? Wpisz hasło.</h2>
+      <form id="powiedz-form" action="zap1.html" method="get">
+        <label for="powiedz-query">Czego szukasz?</label>
+        <div class="powiedz-search">
+          <input id="powiedz-query" name="q" type="search" placeholder="np. beton, rj45, bigos" autocomplete="off" required>
+          <button type="submit">Szukaj</button>
+        </div>
+        <p id="powiedz-status" class="powiedz-status" aria-live="polite"></p>
+      </form>
+    </section>
     <button style="font-size: 32px; padding: 24px 48px;" onclick="goToRandomPage()">hello world</button>
     <div>
       <p style="font-family:'Wingdings'">Nie ma dowodu na to że komunizm to zła ideologia "- Pewien osobnik w wrzechświecie uwielbia linuxa</p>
@@ -80,6 +93,7 @@ wyrobu betonu.</div>
     <div align="right"> 
     <img src="hotkostka/hotkostka.png" alt="Gorące Kostki w twojej okolicy!" width="200" height="400" onclick="location.href='hotkostka/hotkostk.html'">
     </div>
+    <script src="src/powiedz.js"></script>
     <script src="src/index.js"></script>
     <div>
       <div>

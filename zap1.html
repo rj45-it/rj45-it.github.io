@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>POWIEDZ - odpowiedź</title>
+    <link rel="stylesheet" href="src/powiedz.css">
+  </head>
+  <body>
+    <main class="answer-page">
+      <p class="powiedz-label">POWIEDZ</p>
+      <h1 id="answer-title">Szukaj odpowiedzi</h1>
+      <form id="answer-form" action="zap1.html" method="get">
+        <label for="answer-query">Wpisz inne hasło</label>
+        <div class="powiedz-search">
+          <input id="answer-query" name="q" type="search" placeholder="np. cement albo rj45" autocomplete="off" required>
+          <button type="submit">Szukaj</button>
+        </div>
+        <p id="answer-status" class="powiedz-status" aria-live="polite"></p>
+      </form>
+      <article id="answer-card" class="answer-card" hidden>
+        <h2 id="answer-heading"></h2>
+        <p id="answer-text"></p>
+      </article>
+      <a class="back-link" href="index.html">Wróć na stronę główną</a>
+    </main>
+    <script src="src/powiedz.js"></script>
+    <script>
+      const query = new URLSearchParams(window.location.search).get('q') || '';
+      const answer = findPowiedzAnswer(query);
+      const title = document.getElementById('answer-title');
+      const input = document.getElementById('answer-query');
+      const status = document.getElementById('answer-status');
+      const card = document.getElementById('answer-card');
+
+      input.value = query;
+      if (answer) {
+        title.textContent = 'Odpowiedź';
+        document.getElementById('answer-heading').textContent = answer.title;
+        document.getElementById('answer-text').textContent = answer.answer;
+        card.hidden = false;
+      } else if (query) {
+        status.textContent = 'Nie mam jeszcze odpowiedzi na to hasło. Spróbuj czegoś innego.';
+      }
+
+      document.getElementById('answer-form').addEventListener('submit', (event) => {
+        if (!input.value.trim()) {
+          event.preventDefault();
+          status.textContent = 'Wpisz hasło, którego szukasz.';
+        }
+      });
+    </script>
+  </body>
+</html>
