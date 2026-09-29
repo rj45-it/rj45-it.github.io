@@ -42,14 +42,7 @@ const POWIEDZ_ANSWERS = [
   {
     keywords: ['Jak umyć zęby', 'jak1'],
     title: 'Jak umyć zęby',
-    answer: 'Krok 1 
-    Udaj się do składowiska materiałów rozszczepiapnych 
-    Krok 2 
-    otwórz beczke z śmiewznym piktogramem
-    Krok 3 
-    zanurz w środku szczoteczke
-    Krok 4 
-    Zacznij myć zemby '
+    answer: 'Krok 1   Udaj się do składowiska materiałów rozszczepiapnych  Krok 2   otwórz beczke z śmiewznym piktogramem Krok 3  zanurz w środku szczoteczke  Krok 4 Zacznij myć zemby '
   },
   {
     keywords: ['ile kosztuje chleb', 'chleb'],
