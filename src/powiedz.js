@@ -34,7 +34,7 @@ const POWIEDZ_ANSWERS = [
     title: 'Hotkostka',
     answer: 'Hotkostka to gorąca kostka, którą znajdziesz w specjalnej części tej strony.'
   },
-    {
+  {
     keywords: ['Dys', 'dys', 'dysocjacja'],
     title: 'Los Dysos',
     answer: 'Król Dysa układa tam kostę brukową wydrukowaną na drukarce monojonowej'
