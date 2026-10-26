@@ -30,6 +30,21 @@ const POWIEDZ_ANSWERS = [
     answer: 'Bigos mieści się w pralce tylko wtedy, gdy pralka jest odpowiednio duża. Nie próbuj tego sprawdzać.'
   },
   {
+    keywords: ['Czy Lenin był grzybem','Lenin grzyb','Kim był Lenin'],
+    title: 'Lenin Grzyb',
+    answer: 'Tak Lenin był grzybem potwierdza to masa naukowców.'
+  },
+  {
+    keywords: ['Bismarck','Bismarck kanclerz','Otto Von Bismarck','Kim był Bismarck' ],
+    title: 'Bismark',
+    answer: 'Ale Bismarck to był statek'
+  },
+  {
+    keywords: ['bigods'],
+    title: 'Bigods',
+    answer: 'Bigods mieści się w pralce tylko wtedy, gdy pralka jest odpowiednio duża. Nie próbuj tego sprawdzać.'
+  },
+  {
     keywords: ['hotkostka', 'goraca kostka', 'gorąca kostka'],
     title: 'Hotkostka',
     answer: 'Hotkostka to gorąca kostka, którą znajdziesz w specjalnej części tej strony.'
