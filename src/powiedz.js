@@ -2,7 +2,11 @@ const POWIEDZ_ANSWERS = [
   {
     keywords: ['beton'],
     title: 'Beton',
-    answer: 'Beton powstaje z cementu, kruszywa i wody. Jego jakość zależy od jakości oraz proporcji tych składników.'
+    answers: [
+      { type: 'text', text: 'Beton powstaje z cementu, kruszywa i wody. Jego jakość zależy od jakości oraz proporcji tych składników.' },
+      { type: 'text', text: 'Do przygotowania betonu potrzebne są cement, kruszywo i woda. Ważne są jakość składników i ich proporcje.' },
+      { type: 'text', text: 'Beton tworzą cement, kruszywo oraz woda, a jego jakość zależy od użytych składników i ich ilości.' }
+    ]
   },
   {
     keywords: ['cement'],
@@ -40,9 +44,9 @@ const POWIEDZ_ANSWERS = [
     answer: 'Ale Bismarck to był statek'
   },
   {
-    keywords: ['bigods'],
-    title: 'Bigods',
-    answer: 'Bigods mieści się w pralce tylko wtedy, gdy pralka jest odpowiednio duża. Nie próbuj tego sprawdzać.'
+    keywords: ['Ile Kosztuje Chomik','ile kosztuje chomik'],
+    title: 'Chomik',
+    answer: 'Chomik kosztuje w zależności od ilości użytkowników na chomikuj.pl od 30 do 231zł'
   },
   {
     keywords: ['hotkostka', 'goraca kostka', 'gorąca kostka'],
@@ -53,6 +57,20 @@ const POWIEDZ_ANSWERS = [
     keywords: ['Dys', 'dys', 'dysocjacja'],
     title: 'Los Dysos',
     answer: 'Król Dysa układa tam kostę brukową wydrukowaną na drukarce monojonowej'
+  },
+  {
+    keywords: ['Jakie jest piwo','jakie jest piwo'],
+    title: 'PIWO',
+    answers: [
+      {
+        type: 'text',
+        text: 'Najlepsze Piwo to Mocne FULL',
+        image: {
+          src: 'https://nonsa.pl/images/thumb/5/53/Mocny-full.jpg/150px-Mocny-full.jpg',
+          alt: 'Mocne FULL'
+        }
+      }
+    ]
   },
   {
     keywords: ['Jak umyć zęby', 'jak1'],
@@ -79,4 +97,15 @@ function findPowiedzAnswer(query) {
   return POWIEDZ_ANSWERS.find((entry) =>
     entry.keywords.some((keyword) => normalisedQuery.includes(normalisePowiedzText(keyword)))
   );
+}
+
+function getRandomPowiedzResponse(entry) {
+  const responses = Array.isArray(entry.answers) && entry.answers.length
+    ? entry.answers.slice(0, 3)
+    : [entry.answer];
+  const response = responses[Math.floor(Math.random() * responses.length)];
+
+  return typeof response === 'string'
+    ? { type: 'text', text: response }
+    : response;
 }

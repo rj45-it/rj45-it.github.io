@@ -92,6 +92,12 @@
   line-height: 1.6;
 }
 
+.answer-card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .back-link {
   display: inline-block;
   margin-top: 24px;
