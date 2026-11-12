@@ -1,14 +1,14 @@
 :root {
-  --powiedz-ink: #281b15;
-  --powiedz-paper: #fff8e8;
-  --powiedz-accent: #e85d04;
-  --powiedz-accent-dark: #a63d00;
+  --powiedz-ink: #231b15;
+  --powiedz-paper: #aff8e8;
+  --powiedz-accent: #a85d04;
+  --powiedz-accent-dark: #f63d00;
 }
 
 .powiedz-box,
 .answer-page {
   box-sizing: border-box;
-  max-width: 720px;
+  max-width: 1080px;
   margin: 32px auto;
   padding: 28px;
   color: var(--powiedz-ink);
@@ -38,13 +38,13 @@
 .powiedz-search {
   display: flex;
   gap: 10px;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .powiedz-search input {
   min-width: 0;
   flex: 1;
-  padding: 12px 14px;
+  padding: 43px 44px;
   border: 2px solid var(--powiedz-ink);
   color: var(--powiedz-ink);
   background: #fff;
@@ -52,7 +52,7 @@
 }
 
 .powiedz-search button {
-  padding: 12px 20px;
+  padding: 16px 23px;
   border: 2px solid var(--powiedz-ink);
   color: #fff;
   background: var(--powiedz-accent-dark);
@@ -68,7 +68,7 @@
 
 .powiedz-status {
   min-height: 1.4em;
-  margin: 12px 0 0;
+  margin: 15px 0 0;
   color: var(--powiedz-accent-dark);
 }
 
@@ -77,8 +77,8 @@
 }
 
 .answer-card {
-  margin-top: 28px;
-  padding: 22px;
+  margin-top: 24px;
+  padding: 26px;
   border-left: 6px solid var(--powiedz-accent);
   background: #fff;
 }
@@ -100,16 +100,16 @@
 
 .back-link {
   display: inline-block;
-  margin-top: 24px;
+  margin-top: 22px;
   color: var(--powiedz-accent-dark);
   font-weight: 700;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 720px) {
   .powiedz-box,
   .answer-page {
-    margin: 20px 14px;
-    padding: 22px 18px;
+    margin: 25px 13px;
+    padding: 25px 28px;
   }
 
   .powiedz-search {

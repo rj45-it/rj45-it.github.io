@@ -59,9 +59,9 @@ const POWIEDZ_ANSWERS = [
     answer: 'Król Dysa układa tam kostę brukową wydrukowaną na drukarce monojonowej'
   },
    {
-    keywords: ['co Było starsze', 'co było starsze', 'Co było starsze'],
+    keywords: ['co Było starsze', 'co było starsze', 'Co było starsze','Co było pierwsze','co było pierwsze'],
     title: 'Co było starsze',
-    answer: 'Co było pierwsze: jajo czy szyny kolejowe? Pytanie stare jak Maryla Rodowicz. Czy uważacie, że mają? Przemyślcie to jeszcze raz. Nie potrafimy dać wam jednoznacznej odpowiedzi. Możemy jednak zabrać was do Austrii, gdzie z jajek wykluwają się szyny kolejowe...'
+    answer: 'Co było pierwsze: jajo czy szyny kolejowe? Pytanie stare jak Maryla Rodowicz. Czy uważacie, że mają? Przemyślcie to jeszcze raz. Nie opotrafimy dać wam jednoznacznej odpowiedzi. Możemy jednak zabrać was do Austrii, gdzie z jajek wykluwają się szyny kolejowe...'
   },
   {
     keywords: ['Jakie jest piwo','jakie jest piwo'],
@@ -69,10 +69,24 @@ const POWIEDZ_ANSWERS = [
     answers: [
       {
         type: 'text',
-        text: 'Najlepsze Piwo to Mocne FULL',
+        text: 'Najlepsze Piwo to Mocny FULL',
         image: {
           src: 'https://nonsa.pl/images/thumb/5/53/Mocny-full.jpg/150px-Mocny-full.jpg',
-          alt: 'Mocne FULL'
+          alt: 'Mocny FULL'
+        }
+      }
+    ]
+  },
+    {
+    keywords: ['Jak wygląda chomik','jak wygląda chomik','Jak wygląda chomik słuchający muzyki','Chomik Andrzej'],
+    title: 'Chomik',
+    answers: [
+      {
+        type: 'text',
+        text: 'Najlepsze chomiki w twojej okolicy',
+        image: {
+          src: 'https://media.tenor.com/fg6Dl8cYIIUAAAAM/rat.gif',
+          alt:  'Chomik to nie człowiek'
         }
       }
     ]
@@ -90,7 +104,21 @@ const POWIEDZ_ANSWERS = [
       { type: 'text', text: 'Staram się od czasu do czasu robić zakupy właśnie po to, żeby w sklepie spożywczym zobaczyć, jakie są ceny. Porównuję je do cen w sklepach z wcześniejszych miesięcy. Ale panie redaktorze, pani redaktor, chleb rośnie w oparciu o to, co dzieje się na rynkach rolnych. Przecież dzisiaj rolnicy zbierają plony, dzisiaj zbierają pszenicę i cieszą się z tego, bo rozmawiam z rolnikami, że ceny pszenicy, rzepaku, kukurydzy, żywca są wyższe niż były rok, dwa lata temu, trzy lata temu. Bo z punktu widzenia rolnika, to jest wyższy przychód, wyższy dochód.Z punktu widzenia konsumenta, to oznacza, że te produkty, które są przetworzone z rzepaku czy z pszenicy, będą droższe. Ale pamiętajmy o tym, co na tę cenę chleba wpływa, bo na nią wpływa bardzo wiele elementów. Po pierwsze: te, o których powiedziałem na rynkach światowych. Po drugie: no rzepak i pszenica, czyli podstawowe surowce. Po trzecie: no koszty pracy, które na wsi przecież też rosną. Po czwarte: koszty energii. No i wreszcie po piąte: to, z czym polska wieś boryka się cały czas, czyli te straszne plagi, które na polską wieś spadły – ASF, ptasia grypa, susza czasami, potopienia. To wszystko wpływa na ceny żywności. Naszym podstawowym zadaniem, celem, jest to, żeby te ceny z jednej strony były jak najbardziej stabilne, ale z drugiej strony, żeby zrekompensować to emerytom – stąd czternasta emerytura, emerytura bez podatku – czy pracownikom, stąd podniesienie płacy minimalnej do trzech tysięcy złotych od 1 stycznia przyszłego roku.' },
       { type: 'text', text: 'Na to pytanie nasi naukowcy nie mają jeszcze odpowiedzi' }
     ]
-  }
+  },
+  {
+    keywords: ['DONALD TUSK', 'Donald Tusk', 'donald tusk', 'TUSK', 'Tusk', 'tusk', 'DONUT TRUSK', 'Donut Trusk', 'donut trusk' ],
+        title: 'Donald Tusk',
+    answers: [
+      {
+        type: 'text',
+        text: 'Donald Tusk, (znany również jako Donut trusk, czy niemiecki agent). Herr Tusk jest premierem III RZEcZYpospolitej, choć jest też uważany za najlepszego premiera w historii starożytnej niemiec południowo północnych gór nibylandi znajdującej się około 5 metrów od góry Makłowicza.',
+        image: {
+          src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuFd2knHs1-KU05StV5rQ3rNG68glMq1_nIg&s',
+          alt: 'herr tusk'
+        }
+      }
+    ]
+  },
 ];
 
 function normalisePowiedzText(value) {
