@@ -61,7 +61,7 @@ const POWIEDZ_ANSWERS = [
    {
     keywords: ['co Było starsze', 'co było starsze', 'Co było starsze','Co było pierwsze','co było pierwsze'],
     title: 'Co było starsze',
-    answer: 'Co było pierwsze: jajo czy szyny kolejowe? Pytanie stare jak Maryla Rodowicz. Czy uważacie, że mają? Przemyślcie to jeszcze raz. Nie opotrafimy dać wam jednoznacznej odpowiedzi. Możemy jednak zabrać was do Austrii, gdzie z jajek wykluwają się szyny kolejowe...'
+    answer: 'Co było pierwsze: jajo czy szyny kolejowe? Pytanie stare jak Maryla Rodowicz. Czy uważacie, że mają? Przemyślcie to jeszcze raz. Nie potrafimy dać wam jednoznacznej odpowiedzi. Możemy jednak zabrać was do Austrii, gdzie z jajek wykluwają się szyny kolejowe...'
   },
   {
     keywords: ['Jakie jest piwo','jakie jest piwo'],

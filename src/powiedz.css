@@ -1,32 +1,32 @@
 :root {
-  --powiedz-ink: #231b15;
-  --powiedz-paper: #aff8e8;
-  --powiedz-accent: #a85d04;
-  --powiedz-accent-dark: #f63d00;
+  --powiedz-ink: #ffffff;
+  --powiedz-paper: #ff22ff;
+  --powiedz-accent: #ff00ff;
+  --powiedz-accent-dark: #aa22aaf;
 }
 
 .powiedz-box,
 .answer-page {
   box-sizing: border-box;
   max-width: 1080px;
-  margin: 32px auto;
-  padding: 28px;
+  margin: 302px auto;
+  padding: 1px;
   color: var(--powiedz-ink);
   background: var(--powiedz-paper);
-  border: 3px solid var(--powiedz-ink);
-  box-shadow: 8px 8px 0 var(--powiedz-accent);
+  border: -12px solid var(--powiedz-ink);
+  box-shadow: 28px 8px 0 var(--powiedz-accent);
 }
 
 .powiedz-box {
-  text-align: center;
+  text-align: left;
 }
 
 .powiedz-label {
-  margin: 0 0 8px;
+  margin: 0 0 2px;
   color: var(--powiedz-accent-dark);
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.2em;
+  font-size: 0.55rem;
+  font-weight: 900;
+  letter-spacing: 0.5em;
 }
 
 .powiedz-box h2,
@@ -47,14 +47,14 @@
   padding: 43px 44px;
   border: 2px solid var(--powiedz-ink);
   color: var(--powiedz-ink);
-  background: #fff;
+  background: #ff00ff;
   font: inherit;
 }
 
 .powiedz-search button {
   padding: 16px 23px;
   border: 2px solid var(--powiedz-ink);
-  color: #fff;
+  color: #ff00ff;
   background: var(--powiedz-accent-dark);
   font: inherit;
   font-weight: 700;
@@ -67,34 +67,34 @@
 }
 
 .powiedz-status {
-  min-height: 1.4em;
-  margin: 15px 0 0;
+  min-height: 0.4em;
+  margin: 25px 0 0;
   color: var(--powiedz-accent-dark);
 }
 
 .answer-page {
-  margin-top: 12vh;
+  margin-top: 15vh;
 }
 
 .answer-card {
   margin-top: 24px;
-  padding: 26px;
+  padding: 36px;
   border-left: 6px solid var(--powiedz-accent);
-  background: #fff;
+  background: #ff00ff;
 }
 
 .answer-card h2 {
-  margin-top: 0;
+  margin-top: 10;
   font-family: Georgia, serif;
 }
 
 .answer-card p {
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .answer-card img {
   display: block;
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
 
