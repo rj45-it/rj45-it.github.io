@@ -88,12 +88,12 @@ const POWIEDZ_ANSWERS = [
     ]
   },
     {
-    keywords: ['Mysz','Maus','Panzerkampfwagen VIII ','Panzerkampfwagen VIII Maus','Panzerkampfwagen acht Maus','Panzerkampfwagen Acht Maus','Panzerkampfwagen acht maus'],
+   keywords: ['Mysz','Maus','Panzerkampfwagen VIII ','Panzerkampfwagen VIII Maus','Panzerkampfwagen acht Maus','Panzerkampfwagen Acht Maus','Panzerkampfwagen acht maus'],
     title: 'Panzerkampfwagen Acht',
     answers: [
       {
         type: 'text',
-        text: 'Malutki czołg o masie jedynie 188 ton .                                     Wyprodukowany w ilościach 2 egzeplarzy.        Benzynowy bo nie spalinowy .               Uzbrojony w działo główne 128 lub 150mm.                     Najszybszy pojazd wyprodukowany przez Porche                   ',
+        text: 'Malutki czołg o masie jedynie 188 ton .     Wyprodukowany w ilościach 2 egzeplarzy.      Benzynowy bo nie spalinowy .           Uzbrojony w działo główne 128 lub 150mm.                     Najszybszy pojazd wyprodukowany przez Porche ',
         image: {
           src: 'https://i.redd.it/j1ndvwlq14qg1.jpeg',
           alt: 'Maus'
@@ -101,6 +101,7 @@ const POWIEDZ_ANSWERS = [
       }
     ]
   },
+   
     {
     keywords: ['Jak wygląda chomik','jak wygląda chomik','Jak wygląda chomik słuchający muzyki','Chomik Andrzej'],
     title: 'Chomik',
