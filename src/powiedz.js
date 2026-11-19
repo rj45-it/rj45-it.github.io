@@ -88,7 +88,7 @@ const POWIEDZ_ANSWERS = [
     ]
   },
     {
-   keywords: ['Mysz','Maus','Panzerkampfwagen VIII ','Panzerkampfwagen VIII Maus','Panzerkampfwagen acht Maus','Panzerkampfwagen Acht Maus','Panzerkampfwagen acht maus'],
+   keywords: ['Mysz' ,'Maus','Panzerkampfwagen VIII ', 'Panzerkampfwagen VIII Maus', 'Panzerkampfwagen acht Maus', 'Panzerkampfwagen Acht Maus', 'Panzerkampfwagen acht maus' ],
     title: 'Panzerkampfwagen Acht',
     answers: [
       {
