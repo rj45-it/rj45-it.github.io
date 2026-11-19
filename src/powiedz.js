@@ -95,7 +95,7 @@ const POWIEDZ_ANSWERS = [
         type: 'text',
         text: 'Malutki czołg o masie jedynie 188 ton .                                     Wyprodukowany w ilościach 2 egzeplarzy.        Benzynowy bo nie spalinowy .               Uzbrojony w działo główne 128 lub 150mm.                     Najszybszy pojazd wyprodukowany przez Porche                   ',
         image: {
-          src: 'https://i.redd.it/j1ndvwlq14qg1.jpeg','https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Maus_2025_b.jpg/250px-Maus_2025_b.jpg?utm_source=pl.wikipedia.org&utm_campaign=parser&utm_content=thumbnail',
+          src: 'https://i.redd.it/j1ndvwlq14qg1.jpeg',
           alt: 'Maus'
         }
       }
