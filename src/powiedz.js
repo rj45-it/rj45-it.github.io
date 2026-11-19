@@ -33,11 +33,21 @@ const POWIEDZ_ANSWERS = [
     title: 'Bigos',
     answer: 'Bigos mieści się w pralce tylko wtedy, gdy pralka jest odpowiednio duża. Nie próbuj tego sprawdzać.'
   },
-  {
+    {
     keywords: ['Czy Lenin był grzybem','Lenin grzyb','Kim był Lenin'],
     title: 'Lenin Grzyb',
-    answer: 'Tak Lenin był grzybem potwierdza to masa naukowców.'
+    answers: [
+      {
+        type: 'text',
+        text: 'Tak Lenin był grzybem potwierdza to masa naukowców.',
+        image: {
+          src: 'https://preview.redd.it/what-if-lenin-never-became-a-mushroom-v0-7w8dnikn6mmc1.jpeg?width=640&crop=smart&auto=webp&s=bef6e0c45a1f067550477ad1d2e3b7d87dfe3036',
+          alt: 'Lenin'
+        }
+      }
+    ]
   },
+ 
   {
     keywords: ['Bismarck','Bismarck kanclerz','Otto Von Bismarck','Kim był Bismarck' ],
     title: 'Bismark',
@@ -105,6 +115,7 @@ const POWIEDZ_ANSWERS = [
       { type: 'text', text: 'Na to pytanie nasi naukowcy nie mają jeszcze odpowiedzi' }
     ]
   },
+
   {
     keywords: ['DONALD TUSK', 'Donald Tusk', 'donald tusk', 'TUSK', 'Tusk', 'tusk', 'DONUT TRUSK', 'Donut Trusk', 'donut trusk' ],
         title: 'Donald Tusk',
